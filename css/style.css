@@ -1,0 +1,12 @@
+element{
+    --primary: #040401;
+    --secondary: #f3f8d8;
+    --primbuttn: #aaea8b;
+    --secbuttn: #baf2c3;
+    --accent: #34da50;
+    --primbuttncontrast: #64d97b;
+    --secbuttncontrast: #64d97b;
+    --accentcontrast: #64d97b;
+    --primcontrast: #64d97b;
+    --seccontrast: #64d97b;
+}
