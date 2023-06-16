@@ -21,49 +21,47 @@ function lightcolors(){
 
 
 //primary btn
-const hex2 = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+
+// const hex2 = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+
+// const btn2 = document.getElementById('btn')
+// const colors2 = document.querySelector('.color2')
+// const button = document.querySelectorAll('.button')
+// btn2.addEventListener('click',function(){
+//     let hexColor = '#'
+    
+//     for(let i = 0; i < 6;i++){ 
+//       hexColor += hex2[rando()];
+//     }
+//     colors2.textContent = hexColor;
+//     button.forEach(Element => Element.style.backgroundColor = hexColor)
+// });
+
+// function rando(){
+//   return Math.floor(Math.random() * hex2.length);
+// }
 
 const btn2 = document.getElementById('btn')
 const colors2 = document.querySelector('.color2')
 const button = document.querySelectorAll('.button')
 
 btn2.addEventListener('click',function(){
-    let hexColor = '#'
-    
-    for(let i = 0; i < 6;i++){ 
-      hexColor += hex2[rando()];
-    }
-    
+    let hexColor = lightcolors()
     colors2.textContent = hexColor;
     button.forEach(Element => Element.style.backgroundColor = hexColor)
 });
 
-function rando(){
-  return Math.floor(Math.random() * hex2.length);
+function lightcolors(){
+  const red = Math.floor(Math.random() * 255)
+  const green = Math.floor(Math.random() * 255)
+  const blue = Math.floor(Math.random() * 255)
+  const opacity = 0.5
+  return `rgba(${red}, ${green}, ${blue}, ${opacity})`
+    
 }
 
+
 //secondary btn
-// const hex3 = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
-
-// const btn3 = document.getElementById('btn')
-// const colors3 = document.querySelector('.color3')
-// const bgButton2 = document.querySelectorAll('.bgButton2')
-
-// btn3.addEventListener('click',function(){
-//     let hexColor = '#'
-    
-//     for(let i = 0; i < 6;i++){ 
-//       hexColor += hex3[rando()];
-//     }
-    
-//     colors3.textContent = hexColor;
-//     bgButton2.forEach(Element => Element.style.backgroundColor = hexColor)
-// });
-
-// function rando(){
-//   return Math.floor(Math.random() * hex3.length);
-// }
-
 const btn3 = document.getElementById('btn')
 const colors3 = document.querySelector('.color3')
 const bgButton2 = document.querySelectorAll('.bgButton2')
@@ -104,5 +102,12 @@ function lightcolors(){
   return `rgba(${red}, ${green}, ${blue}, ${opacity})`
     
 }
+
+const btn5 = document.getElementById('btn')
+const border = document.querySelectorAll('.border')
+btn5.addEventListener('click',function(){
+  let bros = 'border-current'
+  border.forEach(Element => Element.style.border = 0)
+})
 
 
